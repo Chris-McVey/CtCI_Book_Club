@@ -2,22 +2,33 @@
 
 var Stack = require('./../util/Stack');
 
+const Node = function (value, min) {
+  this.value = value;
+  this.min = min;
+}
+
 class StackMin extends Stack {
   constructor() {
     super();
-    // finish this
+    this.min = Infinity;
+
   }
 
   push(value) {
-    //
+    let newNode = new Node(value, this.min);
+    if (value < this.min) {
+      this.min = value;
+    }
+    this._data.push(newNode);
   }
 
   pop() {
-    //
+    let poppedNode = this._data.pop();
+    this.min = poppedNode.min;
   }
 
   min() {
-    //
+    return this.min;
   }
 }
 

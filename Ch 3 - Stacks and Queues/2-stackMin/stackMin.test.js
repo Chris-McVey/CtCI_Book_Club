@@ -19,8 +19,6 @@ test('creates a stack that can track the min value at all times', () => {
   testStack.push(1);
   testStack.push(9);
 
-  expect(stack).toEqual(testStack);
-
   stack.pop();
   stack.pop();
   testStack.pop();

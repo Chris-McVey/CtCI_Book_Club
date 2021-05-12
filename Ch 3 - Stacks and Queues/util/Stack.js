@@ -1,4 +1,4 @@
-// simple implementation of a stack 
+// simple implementation of a stack
 // using an Array
 
 /*
